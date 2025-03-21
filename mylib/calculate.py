@@ -8,21 +8,23 @@ This module will also be invoked as command line script using click.
 """
 
 import click
+
+
 def add(a, b):
-    ""
+    """"""
     return a + b
 
 
+def subtract(a, b):
+    return a - b
 
-def subtract(a, b): 
-    return a - b    
 
 def multiply(a, b):
     return a * b
 
-def divide(a, b):        
-    return a / b
 
+def divide(a, b):
+    return a / b
 
 
 # build a click group
@@ -33,17 +35,18 @@ def cli():
     """
     pass
 
+
 # build a click command
 @cli.command("add")
-@click.argument('a', type=float)
-@click.argument('b', type=float)
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def add(a, b):
     """
     This function adds two numbers
     """
     # invoke this function with coloured output from click
     click.echo(a + b)
-    # add some more style 
+    # add some more style
     click.secho(f"{a} + {b} = {a+b}", fg="green")
     # no no more and more not satisfied
     click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white")
@@ -52,21 +55,106 @@ def add(a, b):
     # no no more and more not satisfied
     click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True)
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+    )
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True, reverse=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+        reverse=True,
+    )
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True, reverse=True, dim=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+        reverse=True,
+        dim=True,
+    )
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True, reverse=True, dim=True, italic=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+        reverse=True,
+        dim=True,
+        italic=True,
+    )
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True, reverse=True, dim=True, italic=True, strike=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+        reverse=True,
+        dim=True,
+        italic=True,
+        strike=True,
+    )
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True, reverse=True, dim=True, italic=True, strike=True, reset=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+        reverse=True,
+        dim=True,
+        italic=True,
+        strike=True,
+        reset=True,
+    )
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True, reverse=True, dim=True, italic=True, strike=True, reset=True, hidden=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+        reverse=True,
+        dim=True,
+        italic=True,
+        strike=True,
+        reset=True,
+        hidden=True,
+    )
     # no no more and more not satisfied
-    click.secho(f"{a} + {b} = {a+b}", fg="green", bg="white", bold=True, underline=True, blink=True, reverse=True, dim=True, italic=True, strike=True, reset=True, hidden=True, bright=True)
+    click.secho(
+        f"{a} + {b} = {a+b}",
+        fg="green",
+        bg="white",
+        bold=True,
+        underline=True,
+        blink=True,
+        reverse=True,
+        dim=True,
+        italic=True,
+        strike=True,
+        reset=True,
+        hidden=True,
+        bright=True,
+    )
+
 
 # create virtual environment in github codespace
 # python3 -m venv .venv
@@ -75,57 +163,44 @@ def add(a, b):
 # pip freeze > requirements.txt
 # git add .
 # git commit -m "add click library"
-# git push  
-
-
-
-
+# git push
 
 
 # build a click command
 @cli.command("subtract")
-@click.argument('a', type=float)
-@click.argument('b', type=float)
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def subtract(a, b):
     """
     This function subtracts two numbers
     """
     click.echo(a - b)
 
+
 # build a click command
 @cli.command("multiply")
-@click.argument('a', type=float)
-@click.argument('b', type=float)
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def multiply(a, b):
     """
     This function multiplies two numbers
     """
     click.echo(a * b)
 
+
 # build a click command
 @cli.command("divide")
-@click.argument('a', type=float)
-@click.argument('b', type=float)
+@click.argument("a", type=float)
+@click.argument("b", type=float)
 def divide(a, b):
     """
     This function divides two numbers
     """
     click.echo(a / b)
 
+
 if __name__ == "__main__":
     cli()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # """
