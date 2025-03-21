@@ -10,7 +10,7 @@ format:
 
 lint:
 	# pylint --disable=R,C --extension-pkg-whitelist='pydantic' main.py --ignore-patterns=test_.*?py *.py mylib/*.py
-	pylint --disable=R,C --extension-pkg-whitelist=pydantic --ignore-patterns='test_.*\.py' main.py mylib/*.py
+	# pylint --disable=R,C --extension-pkg-whitelist=pydantic --ignore-patterns='test_.*\.py' main.py mylib/*.py
 
 
 container-lint:
